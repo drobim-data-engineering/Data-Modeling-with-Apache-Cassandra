@@ -3,7 +3,7 @@
 ## Author 
 Deivid Robim [Linkedin](https://www.linkedin.com/in/deivid-robim-200b3330/)
 
-### Project 1: Data Modeling with Postgresql
+### Project 2: Data Modeling with Apache Cassandra
 
 A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. 
 The analytics team is particularly interested in understanding what songs users are listening to. 
