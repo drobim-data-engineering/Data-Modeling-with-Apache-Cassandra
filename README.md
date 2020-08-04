@@ -36,12 +36,6 @@ NanoDegree-Data-Engineering-Project-2-Data-Modeling-with-Apache-Cassandra
 
 ### Database Schema
 
-
-
-### Fact Table
-
-### Dimension Tables
-
 ### Instructions for running locally
 
 Clone repository to local machine
