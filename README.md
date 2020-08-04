@@ -16,11 +16,13 @@ They'd like a data engineer to create an Apache Cassandra database which can cre
 NanoDegree-Data-Engineering-Project-2-Data-Modeling-with-Apache-Cassandra
 │   README.md # Project description
 │   requirements.txt # Python packages required to execute scripts
-└───data # The datasets
+|
+└───data # The dataset partitioned by day
 |   |               
 |   yyyy-mm-dd-events.csv
+|   ...
 └───src # Source code      
-│   |  Project_1B_ Project_Template.ipynb # Project Notebook
+│   |  Project_1B_ Project_Template.ipynb # Interactive notebook instead of python scripts
 ```
 
 ### Requirements for running locally
@@ -52,8 +54,22 @@ Change directory to local repository
 cd NanoDegree-Data-Engineering-Project-2-Data-Modeling-with-Apache-Cassandra
 ```
 
-Check results
+Create python virtual environment
+```
+python3 -m venv venv             # create virtualenv
+source venv/bin/activate         # activate virtualenv
+pip install -r requirements.txt  # install requirements (this can take couple of minutes)
+```
 
+Run scripts
+```
+cd src/
+python -m scripts.process_events # collect events into one csv (event_datafile_new.csv)
+python -m scripts.create_tables  # create database schema
+python -m scripts.etl            # load data
+```
+
+Run everything inside jupyter notebook or check results
 ```
 jupyter notebook  # launch jupyter notebook app
 
