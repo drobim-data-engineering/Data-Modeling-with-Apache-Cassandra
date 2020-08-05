@@ -55,7 +55,7 @@ The files contain the following schema:
   - ts
   - userId
 ```
-The ETL consolidates the daily event file into a single file named **event_datafile_new.csv**.<br>
+The ETL consolidates and denormalize the daily event file into a single file named **event_datafile_new.csv**.<br>
 The image below is a screenshot of what the denormalized data should appear like in the event_datafile_new.csv after the ETL run:<br>
 
 <img src="images/image_event_datafile_new.jpg">
