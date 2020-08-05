@@ -90,5 +90,5 @@ Run everything inside jupyter notebook or check results
 jupyter notebook  # launch jupyter notebook app
 
 The notebook interface will appear in a new browser window or tab.
-Navigate to src/Project_1B_ Project_Template.ipynb and run the code cells
+Navigate to src/ETL_Pipeline_Template.ipynb and run the code cells
 ```
