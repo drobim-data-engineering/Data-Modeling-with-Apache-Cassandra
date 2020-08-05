@@ -17,12 +17,17 @@ NanoDegree-Data-Engineering-Project-2-Data-Modeling-with-Apache-Cassandra
 │   README.md # Project description
 │   requirements.txt # Python packages required to execute scripts
 |
-└───data # The dataset partitioned by day
+└───data # The dataset 
 |   |               
 |   yyyy-mm-dd-events.csv
 |   ...
 └───src # Source code      
-│   |  Project_1B_ Project_Template.ipynb # Interactive notebook instead of python scripts
+│   |  ETL_Pipeline_Template.ipynb # Interactive notebook instead of python scripts
+|   |  collect_events.py  # Consolidate event files
+│   │  cassandra_connection.py   # Creates Cassandra Connection
+|   |  cql_queries.py   # Definition of all cql queries
+|   |  etl.py           # ETL script
+|   |  validation.py    # Script to validate the data
 ```
 
 ### Requirements for running locally
