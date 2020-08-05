@@ -34,7 +34,7 @@ NanoDegree-Data-Engineering-Project-2-Data-Modeling-with-Apache-Cassandra
 - Python3 
 
 ### Dataset:
-'''
+```
 Now you are ready to work with the CSV file titled <font color=red>event_datafile_new.csv</font>, located within the Workspace directory.  The event_datafile_new.csv contains the following columns: 
 - artist 
 - firstName of user
