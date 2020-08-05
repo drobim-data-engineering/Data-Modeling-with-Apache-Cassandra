@@ -35,25 +35,25 @@ NanoDegree-Data-Engineering-Project-2-Data-Modeling-with-Apache-Cassandra
 
 ### Dataset:
 Now you are ready to work with the CSV file titled <font color=red>event_datafile_new.csv</font>, located within the Workspace directory. The event_datafile_new.csv contains the following columns: 
-
-- artist
-- auth
-- firstName
-- gender
-- itemInSession
-- lastName
-- length
-- level
-- location
-- method
-- page
-- registration
-- sessionId
-- song
-- status
-- ts
-- userId
-
+```
+  - artist
+  - auth
+  - firstName
+  - gender
+  - itemInSession
+  - lastName
+  - length
+  - level
+  - location
+  - method
+  - page
+  - registration
+  - sessionId
+  - song
+  - status
+  - ts
+  - userId
+```
 The image below is a screenshot of what the denormalized data should appear like in the <font color=red>**event_datafile_new.csv**</font> after the code above is run:<br>
 
 <img src="images/image_event_datafile_new.jpg">
