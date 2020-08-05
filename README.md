@@ -34,7 +34,8 @@ NanoDegree-Data-Engineering-Project-2-Data-Modeling-with-Apache-Cassandra
 - Python3 
 
 ### Dataset:
-Now you are ready to work with the CSV file titled <font color=red>event_datafile_new.csv</font>, located within the Workspace directory. The event_datafile_new.csv contains the following columns: 
+The dataset is split in 30 CSV files partitioned by day named as <font color=red>yyyy-mm-dd-events.csv</font>, located within the event_data directory.
+The files contain the following schema: 
 ```
   - artist
   - auth
@@ -54,7 +55,8 @@ Now you are ready to work with the CSV file titled <font color=red>event_datafil
   - ts
   - userId
 ```
-The image below is a screenshot of what the denormalized data should appear like in the <font color=red>**event_datafile_new.csv**</font> after the code above is run:<br>
+The ETL consolidates the daily event file into a single file named <font color=red>event_datafile_new.csv</font>.
+The image below is a screenshot of what the denormalized data should appear like in the <font color=red>**event_datafile_new.csv**</font> after the ETL run:<br>
 
 <img src="images/image_event_datafile_new.jpg">
 
