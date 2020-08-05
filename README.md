@@ -24,7 +24,7 @@ NanoDegree-Data-Engineering-Project-2-Data-Modeling-with-Apache-Cassandra
 └───src # Source code      
 │   |  ETL_Pipeline_Template.ipynb # Interactive notebook instead of python scripts
 |   |  collect_events.py  # Consolidate event files
-│   │  cassandra_connection.py   # Creates Cassandra Connection
+│   │  cassandra_connection.py   # Definition for Cassandra Connection
 |   |  cql_queries.py   # Definition of all cql queries
 |   |  etl.py           # ETL script
 |   |  validation.py    # Script to validate the data
@@ -55,12 +55,10 @@ The files contain the following schema:
   - ts
   - userId
 ```
-The ETL consolidates the daily event file into a single file named <font color=red>event_datafile_new.csv</font>.:<br>
-The image below is a screenshot of what the denormalized data should appear like in the <font color=red>event_datafile_new.csv</font> after the ETL run:<br>
+The ETL consolidates the daily event file into a single file named **event_datafile_new.csv**.<br>
+The image below is a screenshot of what the denormalized data should appear like in the event_datafile_new.csv after the ETL run:<br>
 
 <img src="images/image_event_datafile_new.jpg">
-
-### Database Schema
 
 ### Instructions for running locally
 
@@ -84,9 +82,7 @@ pip install -r requirements.txt  # install requirements (this can take couple of
 Run scripts
 ```
 cd src/
-python -m scripts.process_events # collect events into one csv (event_datafile_new.csv)
-python -m scripts.create_tables  # create database schema
-python -m scripts.etl            # load data
+python -m etl.py # loads data
 ```
 
 Run everything inside jupyter notebook or check results
