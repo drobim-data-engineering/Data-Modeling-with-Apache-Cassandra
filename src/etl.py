@@ -43,7 +43,6 @@ def main():
     # Creates Keyspace
     print('Creating keyspace...')
     create_keyspace(session,keyspace)
-    keyspace_name = create_keyspace(session,keyspace)
 
     # Sets Keyspace
     print('Setting up keyspace...')

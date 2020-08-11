@@ -7,14 +7,14 @@ def create_tables(session):
             session.execute(query)
         except Exception as e:
             print(e)
-            
+
 def insert_data(session, query, df, df_columns):
     for i, row in df.iterrows():
         data = tuple([row[col] for col in df_columns])
-        session.execute(query, data)    
-        
+        session.execute(query, data)
+
 song_details_itemInSession_create = """
-    CREATE TABLE IF NOT EXISTS song_details_itemInSession 
+    CREATE TABLE IF NOT EXISTS song_details_itemInSession
     (session_id int, itemInSession int, artist_name text, song_title text, song_length float
     ,PRIMARY KEY(session_id, itemInSession))
 """

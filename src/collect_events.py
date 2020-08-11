@@ -49,17 +49,3 @@ def create_output_file(full_data_rows_list):
             writer.writerow((row[0], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[12], row[13], row[16]))
 
     return output_row_count
-
-
-def main():
-    # get the current folder and subfolder event data
-    filepath = os.getcwd() + '/event_data'
-
-    file_path_list = collect_files(filepath)
-    full_data_rows_list = collect_records(file_path_list)
-    output_row_count = create_output_file(full_data_rows_list)
-
-    print(f'Written {output_row_count} rows to the output file.')
-
-if __name__ == '__main__':
-    main()

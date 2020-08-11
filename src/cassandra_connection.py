@@ -6,13 +6,13 @@ def create_connection():
         session = cluster.connect()
         return session
     except Exception as e:
-        print(e)   
-        
+        print(e)
+
 def create_keyspace(session,keyspace):
     try:
         query = """
         CREATE KEYSPACE IF NOT EXISTS """ + keyspace + """
-        WITH REPLICATION = 
+        WITH REPLICATION =
         { 'class' : 'SimpleStrategy', 'replication_factor' : 1 }
         """
         session.execute(query)
