@@ -3,23 +3,21 @@ from cassandra_connection import *
 from collect_events import *
 import re
 
-def validation_input(input_string):
-    regex = re.compile('^[a-zA-Z]([a-zA-Z0-9_]+)*$\w{0,10}', re.I)
-    match = regex.match(str(input_string))
-    return bool(match)
-
 def main():
-
-    # Calls for an infinite loop that keeps executing until user enter a valid keyspace name
-    while True:
-
-        keyspace = input("Enter Keyspace name: ")
-        validate = validation_input(keyspace)
-
-        if validate == False:
-            print("Error! This is not a valid Keyspace name, try again.")
-        else:
-            break
+    """"
+    Script entry point, following these steps:
+        1. Consolidates event files
+        2. Creates connection to Cassandra Cluster
+        3. Creates Cassandra Keyspace
+        4. Sets up Cassandra Keyspace
+        5. Creates Cassandra Tables
+        6. Loads Data into Cassandra Tables
+        7. Shuts down Cassandra Session
+    Args:
+        None
+    Returns:
+        None
+    """
 
     # Gets the current folder and subfolder event data
     print('Consolidating event files...')
@@ -70,6 +68,7 @@ def main():
     session.shutdown()
 
     print('ETL Completed!')
+    print('Please execute validation.py to validate the data')
 
 if __name__ == '__main__':
     main()
